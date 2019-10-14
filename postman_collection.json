@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "841f931b-588b-4e23-b977-501e9f6d9ee8",
+		"name": "mailcred-serverless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://vlrqfsr6ye.execute-api.us-east-1.amazonaws.com/dev/emailProvider",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"domain\":\"maqsoftware.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vlrqfsr6ye.execute-api.us-east-1.amazonaws.com/dev/emailProvider",
+					"protocol": "https",
+					"host": [
+						"vlrqfsr6ye",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"emailProvider"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
