@@ -2,7 +2,7 @@
 const chromium = require("chrome-aws-lambda");
 
 exports.getEmailProviderName = async function(event) {
-  const browser = null;
+  let browser = null;
   try {
     browser = await chromium.puppeteer.launch({
       args: chromium.args,
@@ -24,6 +24,9 @@ exports.getEmailProviderName = async function(event) {
     await page.click('input[type="submit"].btn.btn-mx');
     await page.waitForSelector(".tool-result-body");
     const element = await page.$("pre.alert");
+    if (!element) {
+      throw new Error("NO_TEXT_ELEMENT");
+    }
     const text = await page.evaluate(element => element.textContent, element);
     await browser.close();
     const response = {
@@ -37,7 +40,8 @@ exports.getEmailProviderName = async function(event) {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        emailProviderName: error.message
+        emailProviderName: "UNKNOWN",
+        errorMessage: error.message
       })
     };
   } finally {
