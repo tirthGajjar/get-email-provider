@@ -2,8 +2,7 @@
 const chromium = require("chrome-aws-lambda");
 
 exports.getEmailProviderName = async function(event) {
-  let browser = null;
-  console.log(event.body);
+  const browser = null;
   try {
     browser = await chromium.puppeteer.launch({
       args: chromium.args,
@@ -27,19 +26,6 @@ exports.getEmailProviderName = async function(event) {
     const element = await page.$("pre.alert");
     const text = await page.evaluate(element => element.textContent, element);
     await browser.close();
-    // var emailProviderRegExp = new RegExp(/\"(?<emailProvider>.*?)\"/gm);
-    // const matchRes = emailProviderRegExp.exec(text);
-    // if (matchRes && matchRes.length > 0) {
-    //   const emailProviderName =
-    //     (matchRes.groups && matchRes.groups.emailProvider) || text || "UNKNOWN";
-    //   const response = {
-    //     statusCode: 200,
-    //     body: JSON.stringify({
-    //       emailProviderName
-    //     })
-    //   };
-    //   return response;
-    // }
     const response = {
       statusCode: 200,
       body: JSON.stringify({

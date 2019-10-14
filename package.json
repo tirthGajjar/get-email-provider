@@ -1,37 +1,28 @@
 {
-  "name": "puppdf",
+  "name": "mailcred-mxtoolbox",
   "version": "1.0.0",
-  "description": "convert html to pdf using puppeteer",
-  "main": "src/pdf.js",
-  "directories": {
-    "src": "src"
-  },
-  "files": [
-    "src"
-  ],
+  "description": "get email provider for any domain by scraping mxtoolbox.com",
+  "main": "index.js",
   "scripts": {
-    "start:dev": "node src/pdf.js",
-    "start:build": "npm install && npm run-script build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nilinswap/puppdf.git"
+    "url": "git+https://github.com/tirthGajjar/mailcred-get-email-provider.git"
   },
   "engines": {
-    "node": ">=10.16.3"
+    "node": ">=8.0.0 <10.0.0"
   },
   "keywords": [
-    "pdf",
     "node",
     "puppeteer"
   ],
-  "author": "Swapnil Sharma <nilinswap@github.com>",
+  "author": "Tirth Gajjar <contact@tirth.dev>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nilinswap/puppdf/issues"
+    "url": "https://github.com/tirthGajjar/mailcred-get-email-provider/issues"
   },
-  "homepage": "https://github.com/nilinswap/puppdf#readme",
+  "homepage": "https://github.com/tirthGajjar/mailcred-get-email-provider#readme",
   "dependencies": {
     "chrome-aws-lambda": "^1.20.1",
     "puppeteer-core": "^1.18.1",
