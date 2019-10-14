@@ -1,0 +1,40 @@
+{
+  "name": "puppdf",
+  "version": "1.0.0",
+  "description": "convert html to pdf using puppeteer",
+  "main": "src/pdf.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "start:dev": "node src/pdf.js",
+    "start:build": "npm install && npm run-script build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilinswap/puppdf.git"
+  },
+  "engines": {
+    "node": ">=10.16.3"
+  },
+  "keywords": [
+    "pdf",
+    "node",
+    "puppeteer"
+  ],
+  "author": "Swapnil Sharma <nilinswap@github.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nilinswap/puppdf/issues"
+  },
+  "homepage": "https://github.com/nilinswap/puppdf#readme",
+  "dependencies": {
+    "chrome-aws-lambda": "^1.20.1",
+    "puppeteer-core": "^1.18.1",
+    "serverless-offline": "^5.12.0"
+  }
+}
